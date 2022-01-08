@@ -6,10 +6,13 @@ var jsPsych = initJsPsych({
 
 var timeline = [];
 
+var repo = 'https://jsmnrchtr.github.io/my_experiment/';
+
 var preload = {
   type: jsPsychPreload,
-  images: ['img/blue.png', 'img/orange.png']
+  images: [repo + 'img/blue.png', repo + 'img/orange.png']
 };
+
 
 timeline.push(preload);
 
@@ -27,9 +30,9 @@ var instruction = {
     <p>If the circle is <strong>orange</strong>, press the letter J 
     as fast as you can.</p>
     <div style='width: 700px;'>
-    <div style='float: left;'><img src='img/blue.png'></img>
+    <div style='float: left;'><img src=` + repo + 'img/blue.png'+`></img>
     <p class='small'><strong>Press the F key</strong></p></div>
-    <div style='float: right;'><img src='img/orange.png'></img>
+    <div style='float: right;'><img src=`+ repo + 'img/orange.png'+`></img>
     <p class='small'><strong>Press the J key</strong></p></div>
     </div>
     <p>Press any key to begin.</p>`,
@@ -38,8 +41,8 @@ var instruction = {
 timeline.push(instruction);
 
 var test_stimuli = [
-  { stimulus: "img/blue.png",  correct_response: 'f'},
-  { stimulus: "img/orange.png",  correct_response: 'j'}
+  { stimulus: repo + 'img/blue.png',  correct_response: 'f'},
+  { stimulus: repo + 'img/orange.png',  correct_response: 'j'}
 ];
 
 var fixation = {
