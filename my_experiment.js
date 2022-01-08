@@ -1,10 +1,10 @@
-var jsPsych = initJsPsych({
+/*var jsPsych = initJsPsych({
   on_finish: function() {
   jsPsych.data.displayData();
   }
-}); //initialize jspsych
+}); */
 
-var timeline = [];
+//var timeline = [];
 
 var repo = 'https://jsmnrchtr.github.io/my_experiment/';
 
@@ -12,22 +12,20 @@ var preload = {
   type: jsPsychPreload,
   images: [repo + 'img/blue.png', repo + 'img/orange.png']
 };
-
-
-timeline.push(preload);
+//timeline.push(preload);
 
 var welcome = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: "Welcome to the experiment. Press any key to start."
 };
-timeline.push(welcome);
+//timeline.push(welcome);
 
 var instruction = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `Hallo.</p>`,
   post_trial_gap: 2000
 };
-timeline.push(instruction);
+//timeline.push(instruction);
 
 var test_stimuli = [
   { stimulus: repo + 'img/blue.png',  correct_response: 'f'},
@@ -66,7 +64,7 @@ var test_procedure = {
   randomize_order: true,
   repetitions: 2
 };
-timeline.push(test_procedure);
+//timeline.push(test_procedure);
 
 var debrief_block = {
  type: jsPsychHtmlKeyboardResponse,
@@ -81,7 +79,7 @@ var debrief_block = {
   <p>Press any key to complete the experiment. Thank you!</p>`;
   }
 };
-timeline.push(debrief_block);
+//timeline.push(debrief_block);
 
 // run timeline
-jsPsych.run(timeline);
+//jsPsych.run(timeline);
