@@ -2,6 +2,7 @@ var jsPsych = initJsPsych({
     display_element: 'display_stage',
 });
 
+debugger
 
 var repo = 'https://jsmnrchtr.github.io/my_experiment/';
 
